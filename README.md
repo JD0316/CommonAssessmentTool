@@ -109,4 +109,30 @@ Workflows automatically perform the following tasks on every `push` or `pull_req
 
 You can view workflow runs in the **Actions** tab of the GitHub repository.
 
+---
+
+## 🌐 Accessing the Deployed Application
+
+The backend FastAPI application has been deployed to a public AWS EC2 instance and is accessible through the following URL:
+
+📎 **Swagger UI**  
+👉 [`http://18.116.23.7:8000/docs`](http://18.116.23.7:8000/docs)
+
+---
+
+## 🚀 Continuous Deployment (CD)
+
+This project supports automatic deployment via **GitHub Actions**.
+
+Every time a new **Release** is published from the `main` branch, GitHub Actions will:
+
+1. Connect to the EC2 instance via SSH
+2. Pull the latest code
+3. Rebuild and restart the Docker container
+4. Update the live public API automatically
+
+You can view deployment workflows under the **Actions** tab on GitHub.
+
+
+
 
